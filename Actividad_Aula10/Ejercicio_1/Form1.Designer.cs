@@ -31,13 +31,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbValor = new System.Windows.Forms.TextBox();
-            this.tbPromedio = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCalcularPromedio = new System.Windows.Forms.Button();
             this.tbBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tbResultado = new System.Windows.Forms.TextBox();
             this.btnListarOrdenado = new System.Windows.Forms.Button();
+            this.lbPromedio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,13 +65,6 @@
             this.tbValor.Name = "tbValor";
             this.tbValor.Size = new System.Drawing.Size(81, 20);
             this.tbValor.TabIndex = 2;
-            // 
-            // tbPromedio
-            // 
-            this.tbPromedio.Location = new System.Drawing.Point(107, 72);
-            this.tbPromedio.Name = "tbPromedio";
-            this.tbPromedio.Size = new System.Drawing.Size(80, 20);
-            this.tbPromedio.TabIndex = 3;
             // 
             // btnRegistrar
             // 
@@ -128,18 +121,26 @@
             this.btnListarOrdenado.UseVisualStyleBackColor = true;
             this.btnListarOrdenado.Click += new System.EventHandler(this.btnListarOrdenado_Click);
             // 
+            // lbPromedio
+            // 
+            this.lbPromedio.Location = new System.Drawing.Point(104, 69);
+            this.lbPromedio.Name = "lbPromedio";
+            this.lbPromedio.Size = new System.Drawing.Size(84, 25);
+            this.lbPromedio.TabIndex = 10;
+            this.lbPromedio.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(421, 352);
+            this.Controls.Add(this.lbPromedio);
             this.Controls.Add(this.btnListarOrdenado);
             this.Controls.Add(this.tbResultado);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.tbBuscar);
             this.Controls.Add(this.btnCalcularPromedio);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.tbPromedio);
             this.Controls.Add(this.tbValor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -155,13 +156,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbValor;
-        private System.Windows.Forms.TextBox tbPromedio;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnCalcularPromedio;
         private System.Windows.Forms.TextBox tbBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox tbResultado;
         private System.Windows.Forms.Button btnListarOrdenado;
+        private System.Windows.Forms.Label lbPromedio;
     }
 }
 

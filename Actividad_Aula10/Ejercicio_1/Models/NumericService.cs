@@ -64,7 +64,7 @@ namespace Ejercicio_1.Models
                 }
                 n++;
             }
-            return idx;
+            return Valores[idx];
         }
         public void OrdenarValores() 
         {
