@@ -69,7 +69,19 @@ namespace Ejercicio_1
             {
                 tbResultado.AppendText($"{Convert.ToString(servicio.VerValores(i))}\r\n");
             }
-             
+
+            /*
+            #region Comprobacion del metodo ListarValoresSuperiores()
+            tbResultado.Clear();
+            int cs = 3;
+            int[] vasup = new int[cs];
+            vasup = servicio.ListarValoresSuperiores(cs);
+            for (int a = 0; a < cs; a++)
+            {
+                tbResultado.AppendText($"{Convert.ToString(vasup[a])}\r\n");
+            }
+            #endregion
+            */
 
         }
     }

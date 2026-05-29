@@ -87,11 +87,19 @@ namespace Ejercicio_1.Models
             }
         }
 
-        /*int[] ListarValoresSuperiores(int cant) 
+        public int[] ListarValoresSuperiores(int cant) 
         {
+            int[] superiores = new int[cant];
+            OrdenarValores();
+            for (int i = 0; i < cant; i++)
+            {
+                superiores[i] = Valores[(Contador-1)-i];
+            }
+
+            return superiores;
 
         }
-        */
+        
 
     }
 }
