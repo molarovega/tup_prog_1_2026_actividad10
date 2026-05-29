@@ -28,6 +28,7 @@ namespace Ejercicio_1
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             servicio.Registrar(Convert.ToInt32(tbValor.Text));
+            tbValor.Clear();
         }
 
         private void btnCalcularPromedio_Click(object sender, EventArgs e)
@@ -39,19 +40,36 @@ namespace Ejercicio_1
             }
             else 
             {
-                lbPromedio.Text = "No se ingreso nada";
+                lbEncontrado.Text = "No se ingreso nada";
             }
             
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //int buscado = Convert.ToInt32(tbBuscar.Text);
-            //tbBuscar.Text=Convert.ToString(servicio.Buscar(buscado));
+            int enc= servicio.Buscar(Convert.ToInt32(tbBuscar.Text));
+            tbResultado.Clear();
+            tbBuscar.Clear();
+            if (enc > 0)
+            {
+                tbResultado.Text = "Numero encontrado: " + Convert.ToString(enc);
+            }
+            else 
+            {
+                tbResultado.Text = "Numero no encontrado";
+            }
+            
         }
 
         private void btnListarOrdenado_Click(object sender, EventArgs e)
         {
+            tbResultado.Clear();
+            servicio.OrdenarValores();
+            for (int i = 0; i < servicio.VerContador(); i++)
+            {
+                tbResultado.AppendText($"{Convert.ToString(servicio.VerValores(i))}\r\n");
+            }
+             
 
         }
     }

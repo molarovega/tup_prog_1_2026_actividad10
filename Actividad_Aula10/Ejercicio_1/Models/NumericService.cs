@@ -61,10 +61,11 @@ namespace Ejercicio_1.Models
                 if (Valores[n] == valor)
                 {
                     idx = n;
+                    return Valores[idx];
                 }
                 n++;
             }
-            return Valores[idx];
+            return idx;
         }
         public void OrdenarValores() 
         {
@@ -74,11 +75,14 @@ namespace Ejercicio_1.Models
 
             for (i=0;i<Contador-1;i++) 
             {
-                if (Valores[i] > Valores[j]) 
+                for (j = i+1; j < Contador; j++) 
                 {
-                    aux=Valores[i];
-                    Valores[i]=Valores[j];
-                    Valores[j]=aux;
+                    if (Valores[i] > Valores[j])
+                    {
+                        aux = Valores[i];
+                        Valores[i] = Valores[j];
+                        Valores[j] = aux;
+                    }
                 }
             }
         }
